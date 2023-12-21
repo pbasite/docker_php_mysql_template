@@ -1,0 +1,48 @@
+version: "3.9"
+services:
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8070:8080
+    networks:
+      - main
+
+  php-apache:
+    ports:
+      - "8090:80"
+    networks:
+      - main
+    build: './build/php'
+    restart: always
+    volumes:
+      - ./app:/var/www/html
+      - ./php_conf/php.ini:/usr/local/etc/php/php.ini
+      - ./php_conf/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+  db:
+    image: mysql
+    platform: linux/amd64
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE for error "mbind: Operation not permitted"
+    ports:
+      - "3308:3306"
+    networks:
+      - main
+    #build: './build/mysql'
+    #restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "dbo_test_pwd"
+      MYSQL_DATABASE: "test"
+      MYSQL_USER: site_user
+      MYSQL_PASSWORD: user_pwd
+    volumes:
+      - mysql-data:/var/lib/mysql
+volumes:
+  app:
+  mysql-data:
+
+networks:
+  main:
+    driver: bridge
+
