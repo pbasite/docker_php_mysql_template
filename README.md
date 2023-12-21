@@ -7,7 +7,7 @@ Avoir un client Docker installé et qui tourne.
 
 Avoir quelques notions de l'utilisation des containers Docker.
 
-Après avoir récupérer ce dépot sur son ordinateur et qu'il soit charger dans VSC.
+Après avoir récupérer ce dépot sur son ordinateur et qu'il soit chargé dans VSC.
 
 Démarer les containers avec la commande 
 ```
