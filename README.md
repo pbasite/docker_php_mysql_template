@@ -26,7 +26,7 @@ docker compose up --build db
 ## Base de données MySQL
 ### Configuration
 #### Sécurité
-La sécurité pour l'accès à la base de données est configurée dans le ficheir docker-compose, pensser à le modifier avec vos valeurs.
+La sécurité pour l'accès à la base de données est configurée dans le ficheir docker-compose, pensez à le modifier avec vos valeurs.
 
 ### Visualisation
 Un client ***Adminer*** est disponible et atteiganble depuis http://localhost:8070
