@@ -74,7 +74,7 @@ Avec un autre client (comme MySQL Workbench)
 Ajouter l'extention PHP Debug" de Xdebug.org
 Lire la documentation de l'extention afin de configurer le fichier launch.json.
 
-Normalement, si depuis le menu Debug vous laisser VS le générer il faut juste ajouter le paramètre **Path Mapping** (ci-dessous) sous "port": 9003, dans la partie configuration.  
+Normalement, si depuis le menu Debug vous laisser VS le générer il faut juste ajouter le paramètre **Path Mapping** (ci-dessous) sous ***"port": 9003,*** dans la partie configuration.  
 *Pensez à mettre une virgule après 9003*
 ```
             "pathMappings": {"/var/www/html": "${workspaceFolder}\\app"},
