@@ -1,9 +1,3 @@
-# docker_php_mysql_template
-
-## Configuration xDebug
-Ajouter l'extention PHP Debug" de Xdebug.org
-Lire la documentation de l'extention afin de configurer le fichier launch.json ou copier le code ci-dessous
-```
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
@@ -53,4 +47,3 @@ Lire la documentation de l'extention afin de configurer le fichier launch.json o
         }
     ]
 }
-```
