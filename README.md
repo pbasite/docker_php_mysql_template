@@ -1,9 +1,13 @@
 # docker_php_mysql_template
 
 ## Prérequis
+Avoir Visual Studio Code installé sur son ordinateur.
+
 Avoir un client Docker installé et qui tourne.
 
 Avoir quelques notions de l'utilisation des containers Docker.
+
+Après avoir récupérer ce dépot sur son ordinateur et qu'il soit charger dans VSC.
 
 Démarer les containers avec la commande 
 ```
