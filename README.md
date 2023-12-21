@@ -1,12 +1,15 @@
 # docker_php_mysql_template
 
 ## Prérequis
-Avoir un client Docker installé et qui tourne.  
-Démarer avec la commande 
+Avoir un client Docker installé et qui tourne.
+
+Avoir quelques notions de l'utilisation des containers Docker.
+
+Démarer les containers avec la commande 
 ```
 docker compose up
 ```
-Arrêter avec les touches [ctrl][c]
+Arrêter avec les containers avec les touches [ctrl][c]
 
 En cas de modification des paramètres du fichier docker-compose.yml ou des fichiers ini de PHP.
 Soit :
@@ -22,6 +25,28 @@ Exemple:
 docker compose up --build db 
 ```
 
+## Structure des dossiers du projet
+
+A la raçine du projet vous trouverez le fichier ***docker-compose.yml*** qui contient la définition des containers Docker utilisé pour ce projet.
+
+- **app** :  
+  Contient les fichiers de l'application PHP 
+  - index.php : Démarrage PHP
+  - php_info.php : Informations de la configuration  
+  - debug_info.php :  Information de la configuration de Xdebug
+
+
+  Vous pouvez ajouter tous vos fichiers PHP nécéssaires à votre application dans ce dossier. 
+
+  ***Par mesure de sécurité, éviter de déployer les fichiers php_info.php et debug_info.php sur votre serveur web de production.***
+
+- **build**  
+  - **php** : Contient le fichier Dockerfile pour l'image d'installation de PHP et des composants additionnels
+- **php_config** :   
+Contient les fichiers php.ini pour la config de PHP et xdebug.ini pour la config de Xdebug  
+
+## Apache (Serveur web)
+L'application est atteigable (après avoir démarrer les containers Docker) depuis http://localhost:8090
 
 ## Base de données MySQL
 ### Configuration
