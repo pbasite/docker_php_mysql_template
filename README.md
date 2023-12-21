@@ -16,11 +16,11 @@ docker compose up
 Arrêter avec les containers avec les touches [ctrl][c]
 
 En cas de modification des paramètres du fichier docker-compose.yml ou des fichiers ini de PHP.
-Soit :
+Soit pour recharger/reconstruire es services :
 ```
 docker compose up --build
 ```
-ou si on à modifier que pour un service
+ou si on à modifier un fichier de paramétrisation et que l'on désire uniquement recharger/reconstruire un seul service
 ```
 docker compose up --build [nom du service : db, php-apache] 
 ```
