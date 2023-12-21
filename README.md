@@ -26,7 +26,7 @@ docker compose up --build db
 ## Base de données MySQL
 ### Configuration
 #### Sécurité
-La sécurité pour l'accès à la base de données est configurée dans le ficheir docker-compose, pensez à le modifier avec vos valeurs.
+La sécurité pour l'accès à la base de données est configurée dans le fichier docker-compose, pensez à le modifier avec vos valeurs.
 
 ### Visualisation
 Un client ***Adminer*** est disponible et atteiganble depuis http://localhost:8070
@@ -50,7 +50,7 @@ Ajouter l'extention PHP Debug" de Xdebug.org
 Lire la documentation de l'extention afin de configurer le fichier launch.json.
 
 Normalement, si depuis le menu Debug vous laisser VS le générer il faut juste ajouter le paramètre **Path Mapping** (ci-dessous) sous "port": 9003, dans la partie configuration.  
-*Pensez à mettre un vigrule après 9003*
+*Pensez à mettre une vigrule après 9003*
 ```
             "pathMappings": {"/var/www/html": "${workspaceFolder}\\app"},
 ```
